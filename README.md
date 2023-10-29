@@ -2,8 +2,6 @@
 
 ## git tree of the project 
 
-
-
 ```main``` is the main branch where the source code of HEAD always reflects a production-ready state.
 
 ```dev``` is the branch where the source code of HEAD always reflects a state with the latest delivered development changes for the next release.
@@ -16,13 +14,50 @@ hotfix branches are used to quickly patch production releases
 ```hotfix``` branches are very much like release branches in that they are also meant to prepare for a new production release, albeit unplanned. They arise from the necessity to act immediately upon an undesired state of a live production version.
 
 
-```mermaid 
-    gitGraph LR:
-        commit
-        commit
+```mermaid
+%% https://mermaid.js.org/syntax/gitgraph.html#gitgraph-specific-configuration-options
+%% https://htmlcolorcodes.com/
+%%{ init: {
+        "logLevel": "debug",
+        "theme": "dark",
+        "gitGraph": {
+            "mainBranchName": "main"
+        },
+        "themeVariables": {
+            "git0": "#839192",
+            "git1": "#C0392B ",
+            "git2": "#2E86C1",
+            "gitInv0": "#FFFFFF",
+            "gitBranchLabel0": "#FFFFFF",
+            "commitLabelColor": "#FFFFFF"
+        }
+    }
+}%%
+gitGraph
+    options
+    {
+        "theme": "neutral"
+    }
+    end
+    commit id: "Initial commit"
     branch dev
-        commit
+    checkout dev
+    commit id: "Start development"
     branch feature
+    checkout feature
+    commit id: "Add new feature"
+    checkout dev
+    merge feature id: "Merge new feature"
+    branch hotfix
+    checkout hotfix
+    commit id: "Fix urgent issue"
+    checkout dev
+    merge hotfix id: "Merge hotfix"
     branch release
-    branch hotfix 
+    checkout release
+    commit id: "Prepare for release"
+    checkout main
+    merge release id: "Release new version"
+    checkout dev
+    merge release id: "Merge release"
 ```
