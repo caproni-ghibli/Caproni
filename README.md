@@ -27,6 +27,7 @@ hotfix branches are used to quickly patch production releases
             "git0": "#839192",
             "git1": "#C0392B ",
             "git2": "#2E86C1",
+            
             "gitInv0": "#FFFFFF",
             "gitBranchLabel0": "#FFFFFF",
             "commitLabelColor": "#FFFFFF"
