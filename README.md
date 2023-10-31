@@ -63,3 +63,10 @@ gitGraph
     checkout dev
     merge release id: "Merge release"
 ```
+
+<!-- TODO create workflow for varcel -->
+<!--> TODO 
+
+https://vercel.com/guides/how-can-i-use-github-actions-with-vercel
+
+<-->
