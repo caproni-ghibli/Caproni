@@ -1,0 +1,15 @@
+{
+  "name": "caproni",
+  "version": "1.0.0",
+  "description": "My awesome caproni",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "dependencies": {
+
+  },
+  "devDependencies": {
+
+  }
+}
