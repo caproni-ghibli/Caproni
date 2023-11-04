@@ -9,7 +9,6 @@
 ```feature``` branches are used to develop new features for the upcoming or a distant future release.
 
 ```release``` branches support preparation of a new production release.
-hotfix branches are used to quickly patch production releases
 
 ```hotfix``` branches are very much like release branches in that they are also meant to prepare for a new production release, albeit unplanned. They arise from the necessity to act immediately upon an undesired state of a live production version.
 
@@ -65,8 +64,4 @@ gitGraph
 ```
 
 <!-- TODO create workflow for varcel -->
-<!--> TODO 
-
-https://vercel.com/guides/how-can-i-use-github-actions-with-vercel
-
-<-->
+<!-- TODO https://vercel.com/guides/how-can-i-use-github-actions-with-verce -->
