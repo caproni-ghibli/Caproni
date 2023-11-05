@@ -6,10 +6,7 @@
   "scripts": {
     "lint": "eslint ."
   },
-  "dependencies": {
-
-  },
   "devDependencies": {
-
+    "eslint": "^8.53.0"
   }
 }
