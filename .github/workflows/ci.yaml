@@ -1,6 +1,6 @@
 name: CI
 on: [push]
-job:
+jobs:
   Eslint:
     name: Lint code base
     runs-on: ubuntu-latest
