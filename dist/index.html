@@ -6,6 +6,27 @@
     <script src="https://d3js.org/d3.v6.min.js"></script>
   </head>
   <body>
-    <p>work in progress !!</p>
+    <svg></svg>
+    <script>
+      // Select the SVG element
+      var svg = d3.select('svg').attr('width', 500).attr('height', 300);
+
+      // Define the data for the chart
+      var data = [80, 120, 60, 150, 200];
+
+      // Bind the data to the SVG elements
+      var bars = svg.selectAll('rect').data(data).enter().append('rect');
+
+      // Set the width and height of the bars based on the data
+      bars
+        .attr('width', function (d) {
+          return d;
+        })
+        .attr('height', 20)
+        .attr('y', function (d, i) {
+          return i * 25;
+        })
+        .attr('fill', 'steelblue');
+    </script>
   </body>
 </html>
