@@ -31,7 +31,6 @@ const getGridSize = () => {
     };
   }, []);
 
-  //console.log([gridSize.columns, gridSize.rows], gridSize.total);
   return (
     <div id="grid">
       {[...Array(gridSize.total)].map((_x, i) => (
@@ -41,7 +40,7 @@ const getGridSize = () => {
           onClick={handleStagger}
         />
       ))}
-      <div className="coming-soon">Coming Soon</div>
+      <div className="coming-soon">Somthing Cool Is Coming</div>
     </div>
   );
 };
