@@ -40,7 +40,7 @@ const getGridSize = () => {
           onClick={handleStagger}
         />
       ))}
-      <div className="coming-soon">hello</div>
+      <div className="coming-soon">new stuff comming</div>
         
 
     </div>
