@@ -1,0 +1,43 @@
+
+.flipper-card {
+    perspective: 492px;
+    min-height: 492px;
+    perspective: 1000px;
+}
+
+.flipper-card-inner {
+    width: 100%;
+    height: 492px;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-align: center;
+    }
+
+.flipper-card:hover .flipper-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flipper-card-front,
+.flipper-card-back {
+    position: absolute;
+    width: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 492px;
+    padding: 15px;
+    border-radius: 15px;
+    -webkit-backface-visibility: hidden;
+}
+
+.flipper-card-back {
+    transform: rotateY(180deg);
+}
+
+* {
+    outline: auto;
+}
+
