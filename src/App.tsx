@@ -1,50 +1,42 @@
 import "./App.css"; // Import your CSS file
-import React, { useEffect, useState } from "react";
-import anime from "animejs";
-import randomColor from "randomcolor";
+import FlipperCard from './components/flipper-card/flipper-card';
+import Card from "./components/card/card";
 
-const App = () => {
-  const [gridSize, setGridSize] = useState({ columns: 0, rows: 0, total: 1 });
 
-  const handleStagger = (i: React.MouseEvent<HTMLDivElement>) => {
-    const el = (i.target as HTMLDivElement).id;
-    anime({
-      targets: ".grid-item",
-      backgroundColor: randomColor(),
-      delay: anime.stagger(50, { grid: [gridSize.columns, gridSize.rows], from: parseInt(el) }),
-    });
-  };
+const FrontComponent = () => <div>In porgress</div>;
+const BackComponent = () => <div>Also in progress</div>;
 
-const getGridSize = () => {
-  const columns = Math.floor(document.body.clientWidth / 50);
-  const rows = Math.floor(document.body.clientHeight / 50);
-
-  setGridSize({ columns, rows, total: rows * columns });
-};
-
-  useEffect(() => {
-    getGridSize();
-    window.addEventListener("resize", getGridSize);
-
-    return () => {
-      window.removeEventListener("resize", getGridSize);
-    };
-  }, []);
-
-  return (
-    <div id="grid">
-      {[...Array(gridSize.total)].map((_x, i) => (
-        <div
-          className="grid-item"
-            id={i.toString()}
-          onClick={handleStagger}
-        />
-      ))}
-      <div className="coming-soon">new stuff comming</div>
-        
-
+const App = () => (
+  <div className="page-wrapper homepage" >
+    <div className="container is-max-widescreen">
+    <div className="hp-cards columns is-mobile is-multiline">
+      <div className="column is-12-mobile is-12-tablet is-8-widescreen">
+        <Card contentComponent={<FrontComponent />} />
+      </div>  
+      <div className="column is-12-mobile is-6-tablet is-4-widescreen">
+        <FlipperCard frontComponent={<FrontComponent />} backComponent={<BackComponent />} />
+      </div>
+      <div className="column is-12-mobile is-6-tablet is-4-widescreen">
+        <FlipperCard frontComponent={<FrontComponent />} backComponent={<BackComponent />} />
+      </div>
+      <div className="column is-12-mobile is-12-tablet is-8-widescreen">
+        <FlipperCard frontComponent={<FrontComponent />} backComponent={<BackComponent />} />
+      </div>
+      <div className="column is-12-mobile is-6-tablet is-4-widescreen">
+        <FlipperCard frontComponent={<FrontComponent />} backComponent={<BackComponent />} />
+      </div>
+      <div className="column is-12-mobile is-6-tablet is-4-widescreen">
+        <FlipperCard frontComponent={<FrontComponent />} backComponent={<BackComponent />} />
+      </div>
+      <div className="column is-12-mobile is-6-tablet is-4-widescreen">
+        <FlipperCard frontComponent={<FrontComponent />} backComponent={<BackComponent />} />
+      </div>
+      <div className="column is-12-mobile is-6-tablet is-4-widescreen">
+        <FlipperCard frontComponent={<FrontComponent />} backComponent={<BackComponent />} />
+      </div>
     </div>
-  );
-};
+    </div>
+  </div>
+);
 
 export default App;
