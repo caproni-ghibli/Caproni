@@ -12,7 +12,7 @@
     transform-style: preserve-3d;
     transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     text-align: center;
-    }
+}
 
 .flipper-card:hover .flipper-card-inner {
     transform: rotateY(180deg);
@@ -37,7 +37,5 @@
     transform: rotateY(180deg);
 }
 
-* {
-    outline: auto;
-}
+
 

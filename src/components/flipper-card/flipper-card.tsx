@@ -8,10 +8,10 @@ interface FlipperCardProps {
 
 const FlipperCard: React.FC<FlipperCardProps> = ({ frontComponent, backComponent }) => {
     return (
-        <div className=" is-fluid m-3">
+        <div className="is-fluid m-3">
             <div className="flipper-card">
-                <div className="flipper-card-inner content">
-                    <div className="flipper-card-front p-1 card has-background-primary">
+                <div className="flipper-card-inner card">
+                    <div className=" flipper-card-front p-1 card has-background-primary">
                         {frontComponent}
                     </div>
                     <div className="flipper-card-back p-1 card has-background-link">
