@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'Brevia';
+    src: url('../src/assets/font/brevia/Brevia-Regular.ttf');
+}
+
+:root {
+    --bulma-body-family : 'Brevia', sans-serif;
+}
