@@ -1,0 +1,11 @@
+.MyCurrentPosition {
+    width: 100%;
+    justify-content: center;
+    min-height: 492px;
+    padding: 15px;
+    border-radius: 15px
+}
+
+.MyCurrentPosition img {
+    height: 8rem;
+}
