@@ -31,7 +31,7 @@ export default function Nav() {
             <Link
               key={link.path}
               className={clsx(
-                'hover:border-border dark:hover:border-darkBorder rounded-base border-2 px-2 py-1 transition-colors',
+                'border-border dark:border-darkBorder dark:bg-secondaryBlack dark:text-darkText shadow-light dark:shadow-dark cursor-pointer rounded-base border-2 bg-white px-4 py-2 text-center text-sm font-base transition-all hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none sm:text-base dark:hover:shadow-none',
                 path === link.path
                   ? 'border-border dark:border-darkBorder'
                   : 'border-transparent',

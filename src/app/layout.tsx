@@ -8,7 +8,7 @@ import { ThemeProvider } from '@/components/theme-provider'
 const montserrat = Montserrat({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'John Doe',
+  title: 'Zack',
 }
 
 export default function RootLayout({
@@ -18,6 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <ViewTransitions>
+      <link rel="shortcut icon" href="/favicon.ico" type="any"/>
       <html lang="en">
         <body className={montserrat.className}>
           <ThemeProvider attribute="class" disableTransitionOnChange>
