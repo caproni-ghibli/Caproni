@@ -34,11 +34,6 @@
     }
 }%%
 gitGraph
-    options
-    {
-        "theme": "neutral"
-    }
-    end
     commit id: "Initial commit"
     branch dev
     checkout dev
