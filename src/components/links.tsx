@@ -7,22 +7,23 @@ import {
 } from '@icons-pack/react-simple-icons'
 
 export default function Links() {
+  //! add link
   const links: { icon: IconType; href: string }[] = [
     {
       icon: SiGmail,
-      href: 'mailto:johndoe@gmail.com',
+      href: '',
     },
     {
       icon: SiGithub,
-      href: 'https://github.com/johndoe',
+      href: '',
     },
     {
       icon: SiLinkedin,
-      href: 'https://www.linkedin.com/in/johndoe/',
+      href: '',//! here
     },
     {
       icon: SiMedium,
-      href: 'https://medium.com/@johndoe',
+      href: '',
     },
   ]
 

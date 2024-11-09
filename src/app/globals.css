@@ -13,12 +13,13 @@ body {
 }
 
 body {
-  --sb-track-color: #ffffff;
   --sb-thumb-color: #000000;
+  width: calc(100vw - 16px);
 }
 
 body::-webkit-scrollbar {
   width: 16px;
+
 }
 
 body::-webkit-scrollbar-track {
