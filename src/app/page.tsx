@@ -34,7 +34,6 @@ export default function Home() {
           </RoughNotation>
         </RoughNotationGroup>
       </div>
-      <Links />
     </div>
   )
 }
