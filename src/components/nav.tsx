@@ -11,7 +11,7 @@ export default function Nav() {
   const links = [
     {
       path: '/',
-      text: 'Home',
+      text: 'Me',
     },
     {
       path: '/about',

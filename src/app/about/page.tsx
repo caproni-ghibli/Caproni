@@ -1,5 +1,4 @@
-import Experience from '@/components/sections/experience'
-import Skills from '@/components/sections/skills'
+import { RoughNotation, RoughNotationGroup } from 'react-rough-notation';
 
 export default function About() {
   return (
@@ -7,17 +6,32 @@ export default function About() {
       <h1 className="mb-8 text-2xl font-heading sm:text-4xl">About</h1>
 
       <div className="mb-10 text-base sm:text-lg">
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est
-          consequatur, harum pariatur provident rerum placeat magni voluptas
-          consectetur in exercitationem nobis aut, molestiae iure possimus
-          aspernatur nesciunt laudantium ab atque.
-        </p>
+          <span>
+            {"Hey everyone, I'm Zakaria, proactive and creative "}
+          </span>
+          <RoughNotationGroup show={true}>
+            <RoughNotation type="highlight" order={1} color="#a3e636" show={true} multiline={false}  >
+              <span className='dark:text-text'>
+                software developer
+              </span>
+            </RoughNotation>
+            <span>
+              {" with 4 years of experience designing, building, and maintaining scalable web applications. Specializing in both"}
+            </span>
+            <RoughNotation type="underline" order={1} show={true} multiline={false} >
+              {" Frontend"}
+            </RoughNotation>
+            <span>{" and"}</span>
+            <RoughNotation type="underline" order={1} show={true} multiline={false} >
+              {" Backend."}
+            </RoughNotation>
+            <br />
+            <br />
+            <RoughNotation type="circle" iterations={5} color='red' order={9} show={true} multiline={false} >
+              {" Hire me?"}
+            </RoughNotation>
+          </RoughNotationGroup>
       </div>
-
-      <Skills />
-
-      <Experience />
     </div>
   )
 }
