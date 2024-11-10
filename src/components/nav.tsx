@@ -11,7 +11,7 @@ export default function Nav() {
   const links = [
     {
       path: '/',
-      text: 'Home',
+      text: 'Me',
     },
     {
       path: '/about',
@@ -25,7 +25,7 @@ export default function Nav() {
 
   return (
     <div className="fixed left-0 top-5 z-50 w-[calc(100vw-16px)]">
-      <nav className="text-text border-border dark:border-darkBorder shadow-light dark:shadow-dark mx-auto flex  w-[750px] gap-5 rounded-base border-2 bg-main p-2.5 px-5 text-sm font-base sm:text-base w450:gap-4">
+      <nav className="text-text border-border dark:border-darkBorder shadow-light dark:shadow-dark mx-auto flex w-[750px] gap-5 rounded-base border-2 bg-main p-2.5 px-5 text-sm font-base sm:text-base w450:gap-4">
         {links.map((link) => {
           return (
             <Link
