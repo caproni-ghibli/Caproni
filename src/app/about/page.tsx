@@ -10,7 +10,7 @@ export default function About() {
             {"Hey everyone, I'm Zakaria, proactive and creative "}
           </span>
           <RoughNotationGroup show={true}>
-            <RoughNotation type="highlight" order={2} color="#a3e636"  multiline={false}  >
+            <RoughNotation type="highlight" order={1} color="#a3e636"  multiline={false}  >
               <span className='dark:text-text'>
                 software developer
               </span>
@@ -27,8 +27,10 @@ export default function About() {
             </RoughNotation>
             <br />
             <br />
-            <RoughNotation type="circle" iterations={5} color='red' order={1} multiline={false} >
-              {" Hire me?"}
+            <RoughNotation type="circle" iterations={5} color='red' order={2} multiline={false} >
+              <a target="_blank" href={'https://www.linkedin.com/in/zakariabj/'}>              
+                {" Hire me?"}
+              </a>
             </RoughNotation>
           </RoughNotationGroup>
       </div>
