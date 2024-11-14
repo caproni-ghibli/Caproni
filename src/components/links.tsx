@@ -7,7 +7,6 @@ import {
 } from '@icons-pack/react-simple-icons'
 
 export default function Links() {
-  //! add link
   const links: { icon: IconType; href: string }[] = [
     {
       icon: SiGmail,
@@ -19,7 +18,7 @@ export default function Links() {
     },
     {
       icon: SiLinkedin,
-      href: 'https://www.linkedin.com/in/zakariabj/',//! here
+      href: 'https://www.linkedin.com/in/zakariabj/',
     }
   ]
 
