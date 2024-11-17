@@ -1,10 +1,10 @@
-import type { Metadata } from 'next'
-import { Montserrat } from 'next/font/google'
 import './globals.css'
-import Nav from '@/components/nav'
-import { ViewTransitions } from 'next-view-transitions'
+import { Montserrat } from 'next/font/google'
 import { ThemeProvider } from '@/components/theme-provider'
+import { ViewTransitions } from 'next-view-transitions'
 import Links from '@/components/links'
+import Nav from '@/components/nav'
+import type { Metadata } from 'next'
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 

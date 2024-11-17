@@ -1,54 +1,50 @@
-import PROJECTS from '@/data/projects'
-import { AspectRatio } from '@/components/ui/aspect-ratio'
+import { faCalendar } from '@fortawesome/free-regular-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Link from 'next/link';
+import PAST_ROLES from '@/data/experience'
 
 export default function Work() {
+
   return (
     <div>
+
       <h1 className="mb-8 text-2xl font-heading sm:text-4xl">Work</h1>
 
-      <div className="flex flex-col gap-5">
-        {PROJECTS.map((project, id) => {
+      <div className="grid md:grid-cols-2 gap-5">
+        {PAST_ROLES.map((pastRole, id) => {
           return (
-            <div
-              className="border-border dark:border-darkBorder shadow-light dark:shadow-dark rounded-base border-2 bg-main p-4 sm:p-5"
+            <Link 
+              href={`work/${id}`} 
               key={id}
+              passHref
             >
-              <AspectRatio
-                className="border-border dark:border-darkBorder shadow-light dark:shadow-dark !-bottom-[2px] rounded-base border-2"
-                ratio={71 / 26}
+              <div
+                className="border-border h-full dark:border-darkBorder shadow-light dark:shadow-dark rounded-base border-2 bg-main p-4 sm:p-5 text-text font-base flex flex-col justify-between cursor-pointer"
               >
-                <img
-                  className="w-full rounded-base"
-                  src={`${project.previewImage}`}
-                  alt={project.name}
-                />
-              </AspectRatio>
-
-              <div className="text-text mt-5 font-base">
+                
                 <h2 className="text-xl font-heading sm:text-2xl">
-                  {project.name}
+                  {pastRole.role}
                 </h2>
 
-                <p className="mt-2">{project.description}</p>
+                <p className="mt-2">{pastRole.company}</p>
 
-                <div className="mt-8 grid grid-cols-2 gap-5">
-                  <a
-                    className="border-border dark:border-darkBorder dark:bg-secondaryBlack dark:text-darkText shadow-light dark:shadow-dark cursor-pointer rounded-base border-2 bg-white px-4 py-2 text-center text-sm font-base transition-all hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none sm:text-base dark:hover:shadow-none"
-                    href={project.liveLink}
-                    target="_blank"
-                  >
-                    Visit
-                  </a>
-                  <a
-                    className="border-border dark:border-darkBorder dark:bg-secondaryBlack dark:text-darkText shadow-light dark:shadow-dark cursor-pointer rounded-base border-2 bg-white px-4 py-2 text-center text-sm font-base transition-all hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none sm:text-base dark:hover:shadow-none"
-                    href={project.repoUrl}
-                    target="_blank"
-                  >
-                    Github
-                  </a>
+                <p className="mt-2">{pastRole.description}</p>
+
+                <div className='flex items-center gap-1'>
+
+                  <FontAwesomeIcon className='h-3' icon={faCalendar} />
+                  
+                  <span>{pastRole.startDate}</span>
+                  
+                  {!!pastRole.endDate && "-"}
+                  
+                  <span>{pastRole.endDate}</span>
+                
                 </div>
+                
               </div>
-            </div>
+
+            </Link>
           )
         })}
       </div>

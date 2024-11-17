@@ -1,9 +1,9 @@
 'use client'
 
 import { Link } from 'next-view-transitions'
+import { ThemeSwitcher } from './theme-switcher'
 import { usePathname } from 'next/navigation'
 import clsx from 'clsx'
-import { ThemeSwitcher } from './theme-switcher'
 
 export default function Nav() {
   const path = usePathname()
