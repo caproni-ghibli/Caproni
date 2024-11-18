@@ -19,7 +19,10 @@ export default function Work() {
               passHref
             >
               <div
-                className="border-border h-full dark:border-darkBorder shadow-light dark:shadow-dark rounded-base border-2 bg-main p-4 sm:p-5 text-text font-base flex flex-col justify-between cursor-pointer"
+                className="
+                  border-border h-full dark:border-darkBorder shadow-light dark:shadow-dark rounded-base border-2 bg-main p-4 sm:p-5 text-text font-base flex flex-col justify-between cursor-pointer
+                    transition-all hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none sm:text-base dark:hover:shadow-none
+                  "
               >
                 
                 <h2 className="text-xl font-heading sm:text-2xl">
@@ -27,8 +30,6 @@ export default function Work() {
                 </h2>
 
                 <p className="mt-2">{pastRole.company}</p>
-
-                <p className="mt-2">{pastRole.description}</p>
 
                 <div className='flex items-center gap-1'>
 
