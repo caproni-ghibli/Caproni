@@ -25,7 +25,7 @@ export default function RootLayout({
           <div className="h-max">
             <ThemeProvider attribute="class" disableTransitionOnChange>
               <Nav />
-              <div className="text-text dark:text-darkText mx-auto w-[750px] max-w-full px-5 pb-10 pt-28">
+              <div className="text-text dark:text-darkText ml-auto w-full pb-10 pt-28 place-items-center">
                 {children}
               </div>
               <Links />
