@@ -43,8 +43,8 @@ const config: Config = {
         heading: '700',
       },
       animation: {
-        marquee: "marquee 5s linear infinite",
-        marquee2: "marquee2 5s linear infinite",
+        marquee: "marquee 10s linear infinite",
+        marquee2: "marquee2 10s linear infinite",
       },
       keyframes: {
         marquee: {

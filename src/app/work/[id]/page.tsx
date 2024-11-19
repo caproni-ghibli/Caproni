@@ -42,14 +42,13 @@ function WorkPage({ params }: { params: Params }) {
 
       <div className='md:w-[calc(100vw-16px)]  w-[100vw]'>
       
-        {!!skill.skills && <Marquee items={ skill.skills } />}
+        {!!skill.skills && <Marquee items={ skill.skills } /> }
+        {!!skill.skills && <br /> }
       
       </div>
 
 
       <div className='px-5 w-[750px] max-w-full'>
-
-        <br />
 
         <ul className='list-disc'>
           {skill.keyResponsibilities.map((keyResponsibility, id) => (
