@@ -40,7 +40,7 @@ function WorkPage({ params }: { params: Params }) {
         
       </div>
 
-      <div className='w-full'>
+      <div className='md:w-[calc(100vw-16px)]  w-[100vw]'>
       
         {!!skill.skills && <Marquee items={ skill.skills } />}
       
