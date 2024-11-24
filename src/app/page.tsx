@@ -8,7 +8,7 @@ import {
 
 export default function Home() {
   return (
-    <div className="font-base w-[750px] max-w-full px-5">
+    <div className="font-base w-[--page-width] max-w-full px-5">
       <h1 className="text-2xl font-heading sm:text-4xl">Zakaria</h1>
       <p className="mt-2 text-lg mb-10 sm:text-xl">Software Developer</p>
       <div className='flex flex-col sm:flex-row gap-8'>

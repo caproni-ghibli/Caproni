@@ -6,6 +6,11 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-size: 18px;
+}
+
+:root {
+  --page-width: 850px;
 }
 
 body {

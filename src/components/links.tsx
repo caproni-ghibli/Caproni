@@ -23,7 +23,7 @@ export default function Links() {
 
   return (
     <div className='fixed left-0 bottom-5 z-50 w-[calc(100vw-16px)] flex'>
-      <div className="mx-auto flex justify-center w-[750px] flex-wrap items-center gap-5">
+      <div className="mx-auto flex justify-center w-[--page-width] flex-wrap items-center gap-5">
           {links.map((link, id) => {
             return (
               <a 
