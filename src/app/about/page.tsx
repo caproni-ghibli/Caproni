@@ -10,9 +10,14 @@ export default function About() {
             <span>
               {"Hey everyone, I'm Zakaria, proactive and creative "}
             </span>
-              <RoughNotation type="highlight" order={1} color="#a3e636"  multiline={false}  >
+              <RoughNotation type="highlight" order={1} color="#a3e636"  multiline={false} iterations={1} >
                 <span className='dark:text-text'>
-                  software developer
+                  {" software "}
+                </span>
+              </RoughNotation>
+              <RoughNotation type="highlight" order={1} color="#a3e636"  multiline={false} iterations={1} >
+                <span className='dark:text-text'>
+                  {" developer"}
                 </span>
               </RoughNotation>
               <span>
@@ -36,9 +41,14 @@ export default function About() {
         <div className="my-10 text-base sm:text-lg">
           <h1 className="mb-8 text-2xl font-heading sm:text-4xl">Future Plans</h1>
             <span>{"In the future, I aim to establish myself as a "}</span>
-            <RoughNotation type="highlight" order={6} color="#a3e636"  multiline={false}  >
+            <RoughNotation type="highlight" order={6} color="#a3e636"  multiline={false} iterations={1} >
               <span className='dark:text-text'>
-                {" software architect "}
+                {" software "}
+              </span>
+            </RoughNotation>
+            <RoughNotation type="highlight" order={6} color="#a3e636"  multiline={false} iterations={1} >
+              <span className='dark:text-text'>
+                {" architect "}
               </span>
             </RoughNotation>
             <span>
