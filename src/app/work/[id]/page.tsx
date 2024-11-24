@@ -1,68 +1,126 @@
-import PAST_ROLES from '@/data/experience'
 import { faCalendar } from '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { RoughNotation, RoughNotationGroup } from 'react-rough-notation';
 import Marquee from '@/components/ui/marquee'
+import PAST_ROLES from '@/data/experience'
 
 interface Params {
   id: number;  
 }
 
+
+
+
+
 function WorkPage({ params }: { params: Params }) {
   const skill = PAST_ROLES[params.id];
   return (
     <div className='w-full place-items-center'>
+      <RoughNotationGroup show={true}>
 
-      <div className=' px-5 w-[--page-width] max-w-full'>
 
-        <h2 className="text-xl font-heading sm:text-2xl">
-          {skill.role}
-        </h2>
+        <div className=' px-5 w-[--page-width] max-w-full'>
 
-        <div className='flex items-center gap-1'>
+          <h2 className="text-xl font-heading sm:text-2xl">
+            {skill.role}
+          </h2>
 
-          <FontAwesomeIcon className='h-3' icon={faCalendar} />
+          <div className='flex items-center gap-1'>
+
+            <FontAwesomeIcon className='h-3' icon={faCalendar} />
+            
+            <span>{skill.startDate}</span>
+            
+            {!!skill.endDate && "-"}
+            
+            <span>{skill.endDate}</span>
+
+          </div>
+
+          <div className='w-[--page-width] max-w-full'>
+
+            <h3 className='text-lg font-heading'>
+              <span className='mr-2'>
+                Role and impact at 
+              </span>
+              
+              <RoughNotation type="highlight" order={1} color="#a3e636"  multiline={false} >
+                <span className='dark:text-text'>
+                  {skill.company}
+                </span>
+              </RoughNotation>
+            </h3>
           
-          <span>{skill.startDate}</span>
+          </div>
+                      
+          <p>{skill.description}</p>
           
-          {!!skill.endDate && "-"}
+          <br />
           
-          <span>{skill.endDate}</span>
-
         </div>
 
-        <p className="mt-2 mr-auto">{skill.company}</p>
-
-        <br />
-                    
-        <p>{skill.description}</p>
+        <div className='md:w-[calc(100vw-16px)]  w-[100vw]'>
         
-        <br />
+          {!!skill.skills && <Marquee items={ skill.skills } /> }
+          {!!skill.skills && <br /> }
         
-      </div>
+        </div>
 
-      <div className='md:w-[calc(100vw-16px)]  w-[100vw]'>
+        <div className='px-5 w-[--page-width] max-w-full'>
+
+          <h3 className='text-lg font-heading'>
+            <span className='mr-2'> 
+              Key Contributions at 
+            </span>
+            
+            <RoughNotation type="highlight" order={2} color="#a3e636"  multiline={false}  >
+              <span className='dark:text-text'>
+                {skill.company}
+              </span>
+            </RoughNotation>
+          </h3>
+
+          <ul className='list-disc'>
+            {skill.keyResponsibilities.map((keyResponsibility, id) => (
+              <li className='m-3' key={id}>{keyResponsibility}</li>
+            ))}
+          </ul>
+
+          
+          {!!skill.skills && (<hr className="w-auto h-1 -mx-6 my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700" />)}
+          
+          {!!skill.skills && <h3 className='text-lg font-heading'>
+            <span className='mr-2'>
+              Technologies I used at 
+            </span>
+            
+            <RoughNotation type="highlight" order={3} color="#a3e636"  multiline={false}  >
+              <span className='dark:text-text'>
+                {skill.company}
+              </span>
+            </RoughNotation>
+          </h3>}
+
+          <span>
+            {!!skill.skills && skill.skills.map((oneSkill, id) => (
+              <span key={id} className='m-3'>
+                 {oneSkill.skill}{ !!skill.skills && id < skill.skills.length - 1 && ', '}
+              </span>
+            ))}
+          </span>
+
+          {!!skill.closingStatement && (<hr className="w-auto h-1 -mx-6 my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700" />)}
+
+          <p>
+            {!!skill.closingStatement && skill.closingStatement}
+          </p>
+
+        </div>
       
-        {!!skill.skills && <Marquee items={ skill.skills } /> }
-        {!!skill.skills && <br /> }
-      
-      </div>
+      </RoughNotationGroup>     
 
+      <br />
 
-      <div className='px-5 w-[--page-width] max-w-full'>
-
-        <ul className='list-disc'>
-          {skill.keyResponsibilities.map((keyResponsibility, id) => (
-            <li className='m-3' key={id}>{keyResponsibility}</li>
-          ))}
-        </ul>
-
-        <br />
-
-        <p>
-          {!!skill.closingStatement && skill.closingStatement}
-        </p>
-
-      </div>
     </div>
   
   );
