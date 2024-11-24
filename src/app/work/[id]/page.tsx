@@ -12,7 +12,7 @@ function WorkPage({ params }: { params: Params }) {
   return (
     <div className='w-full place-items-center'>
 
-      <div className=' px-5 w-[750px] max-w-full'>
+      <div className=' px-5 w-[--page-width] max-w-full'>
 
         <h2 className="text-xl font-heading sm:text-2xl">
           {skill.role}
@@ -48,7 +48,7 @@ function WorkPage({ params }: { params: Params }) {
       </div>
 
 
-      <div className='px-5 w-[750px] max-w-full'>
+      <div className='px-5 w-[--page-width] max-w-full'>
 
         <ul className='list-disc'>
           {skill.keyResponsibilities.map((keyResponsibility, id) => (

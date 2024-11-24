@@ -2,7 +2,7 @@ import { RoughNotation, RoughNotationGroup } from 'react-rough-notation';
 
 export default function About() {
   return (
-    <div className="font-base w-[750px] max-w-full  px-5">
+    <div className="font-base w-[--page-width] max-w-full  px-5">
       <h1 className="mb-8 text-2xl font-heading sm:text-4xl">About</h1>
 
       <div className="mb-10 text-base sm:text-lg">

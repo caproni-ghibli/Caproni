@@ -6,7 +6,7 @@ import PAST_ROLES from '@/data/experience'
 export default function Work() {
 
   return (
-    <div className=' w-[750px]  px-5 max-w-full'>
+    <div className=' w-[--page-width]  px-5 max-w-full'>
 
       <h1 className="mb-8 text-2xl font-heading sm:text-4xl">Work</h1>
 
