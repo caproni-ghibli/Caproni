@@ -16,7 +16,6 @@ function WorkPage({ params }: { params: Params }) {
   const skill = PAST_ROLES[params.id];
   return (
     <div className='w-full place-items-center'>
-      <RoughNotationGroup show={true}>
 
 
         <div className=' px-5 w-[--page-width] max-w-full'>
@@ -41,14 +40,8 @@ function WorkPage({ params }: { params: Params }) {
 
             <h3 className='text-lg font-heading'>
               <span className='mr-2'>
-                Role and impact at 
+               {"Role and impact at "}{skill.company}
               </span>
-              
-              <RoughNotation type="highlight" order={1} color="#a3e636"  multiline={false} >
-                <span className='dark:text-text'>
-                  {skill.company}
-                </span>
-              </RoughNotation>
             </h3>
           
           </div>
@@ -70,12 +63,11 @@ function WorkPage({ params }: { params: Params }) {
 
           <h3 className='text-lg font-heading'>
             <span className='mr-2'> 
-              Key Contributions at 
+              {"Key Contributions at "}{skill.company}
             </span>
             
             <RoughNotation type="highlight" order={2} color="#a3e636"  multiline={false}  >
               <span className='dark:text-text'>
-                {skill.company}
               </span>
             </RoughNotation>
           </h3>
@@ -91,14 +83,8 @@ function WorkPage({ params }: { params: Params }) {
           
           {!!skill.skills && <h3 className='text-lg font-heading'>
             <span className='mr-2'>
-              Technologies I used at 
+             { "Technologies I used at "}  {skill.company}
             </span>
-            
-            <RoughNotation type="highlight" order={3} color="#a3e636"  multiline={false}  >
-              <span className='dark:text-text'>
-                {skill.company}
-              </span>
-            </RoughNotation>
           </h3>}
 
           <span>
@@ -116,8 +102,6 @@ function WorkPage({ params }: { params: Params }) {
           </p>
 
         </div>
-      
-      </RoughNotationGroup>     
 
       <br />
 
