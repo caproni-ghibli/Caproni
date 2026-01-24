@@ -6,27 +6,21 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-
 }
-
-
 
 @media (min-width: 768px) {
   * {
     font-size: 18px;
-    line-height: 2rem; 
+    line-height: 2rem;
   }
-} 
-
-
-
+}
 
 :root {
   --page-width: 850px;
 }
 
 body {
-  @apply dark:bg-darkBg bg-bg;
+  @apply bg-bg dark:bg-darkBg;
 }
 
 body {
@@ -37,7 +31,6 @@ body {
 
 body::-webkit-scrollbar {
   width: 16px;
-
 }
 
 body::-webkit-scrollbar-track {

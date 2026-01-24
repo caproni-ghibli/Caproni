@@ -1,3 +1,5 @@
+// TODO move to database
+
 const PROJECTS: {
   name: string
   description: string

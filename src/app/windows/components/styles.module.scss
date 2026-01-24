@@ -1,0 +1,138 @@
+.componentScope {
+  @font-face {
+    font-family: 'Jersey 15';
+    src: url(../public/Jersey15-Regular.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'Open Sans';
+    src: url(../public/OpenSans-Regular.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'Open Sans Semibold';
+    src: url(../public/OpenSans-SemiBold.ttf) format('truetype');
+  }
+
+  @media (min-width: 768px) {
+    * {
+      font-size: 18px;
+      line-height: 1.7em;
+    }
+  }
+
+  h1 {
+    font-family: 'Jersey 15';
+    font-weight: 500;
+    font-size: 40px;
+    margin: 8px 0 8px 0;
+  }
+
+  h2 {
+    font-family: 'Jersey 15';
+    font-weight: 400;
+    font-size: 30px;
+    margin: 8px 0 8px 0;
+  }
+
+  h3 {
+    font-family: 'Open Sans Semibold';
+    font-weight: 200;
+    font-size: 18px;
+    margin: 4px 0 4px 0;
+  }
+
+  h4 {
+    font-family: 'Open Sans Semibold';
+    font-weight: 600;
+    font-size: 16px;
+    margin: 8px 0 8px 0;
+  }
+
+  p,
+  a,
+  li {
+    font-family: 'Open Sans';
+    font-size: 14px;
+  }
+
+  div {
+    font-family: 'Open Sans';
+    font-size: 10px;
+  }
+
+  a {
+    color: #183672;
+    text-decoration-line: underline;
+    text-decoration-thickness: 2px;
+  }
+
+  a:hover {
+    color: #199995;
+    text-decoration: none;
+    box-shadow: inset 100vh 0 0 0 #d3e2e7;
+  }
+
+  br {
+    content: '';
+    margin: 1em;
+    display: block;
+  }
+
+  span {
+    font-family: 'Open Sans';
+    font-weight: 800;
+    font-size: 14px;
+    margin: 8px 0 8px 0;
+  }
+
+  * {
+    font-family: 'Open Sans';
+    font-size: 14px;
+  }
+
+  hr {
+    margin: 16px 0 16px 0;
+  }
+
+  img,
+  video {
+    max-width: 250px;
+    height: auto;
+  }
+
+  .listLink {
+    font-family: 'MS Sans Serif';
+    font-size: 12px;
+    gap: 8px;
+  }
+
+  .listLink:hover {
+    font-family: 'MS Sans Serif';
+    font-size: 12px;
+    gap: 8px;
+    text-decoration: none;
+    box-shadow: none;
+  }
+
+  .role {
+    font-family: 'Open Sans';
+    font-size: 14px;
+    font-style: italic;
+  }
+
+  .fullWidthImage {
+    height: 250px;
+    width: 250px;
+    top: 0;
+    left: 0;
+  }
+
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  overflow: hidden;
+  background-color: transparent !important;
+  background-image: url('../public/wp6097230.png');
+  background-size: cover;
+  letter-spacing: 0.3px;
+  line-height: 1.5rem;
+}
