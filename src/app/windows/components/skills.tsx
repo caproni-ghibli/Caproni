@@ -4,7 +4,7 @@ import { Shell3236 } from '@react95/icons'
 import * as S from './layout-styling'
 
 interface SkillsProps {
-  closeSkillsModal: boolean | (() => boolean | void)
+  closeSkillsModal: () => void
 }
 
 function Skills({ closeSkillsModal }: SkillsProps) {
@@ -28,7 +28,14 @@ function Skills({ closeSkillsModal }: SkillsProps) {
           something people can measure? However, here is a rough estimate of
           some of my skills, in progress bar style.
         </p>
-        <hr color="gray" align="left" width="100%" />
+        <hr
+          style={{
+            borderColor: 'gray',
+            width: '100%',
+            marginLeft: 0,
+            marginRight: 'auto',
+          }}
+        />
         <h2>Design tools</h2>
         <h4>Figma, Sketch</h4>
         <ProgressBar width={250} percent={95} />
@@ -45,7 +52,14 @@ function Skills({ closeSkillsModal }: SkillsProps) {
         <h4>Analytics</h4>
         <ProgressBar width={250} percent={70} />
         <div style={{ margin: '8px' }} />
-        <hr color="gray" align="left" width="100%" />
+        <hr
+          style={{
+            borderColor: 'gray',
+            width: '100%',
+            marginLeft: 0,
+            marginRight: 'auto',
+          }}
+        />
         <h2>Dev tools</h2>
         <h4>Storybook(JS)</h4>
         <ProgressBar width={250} percent={75} />
@@ -60,7 +74,14 @@ function Skills({ closeSkillsModal }: SkillsProps) {
         <h4>Vue</h4>
         <ProgressBar width={250} percent={15} />
         <div style={{ margin: '8px' }} />
-        <hr color="gray" align="left" width="100%" />
+        <hr
+          style={{
+            borderColor: 'gray',
+            width: '100%',
+            marginLeft: 0,
+            marginRight: 'auto',
+          }}
+        />
         <h2>Other Skills</h2>
         <ul>
           <li>Agile methods</li>
