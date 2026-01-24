@@ -57,5 +57,22 @@ gitGraph
     merge release id: "Merge release"
 ```
 
+## Kanban board
+
+```mermaid
+---
+config:
+  kanban:
+    ticketBaseUrl: '#TICKET#'
+---
+kanban
+  Todo
+    [Check this out]@{ ticket: 'https://github.com/janneilkka/janneilkka.com', priority: 'Very High' }
+    [Add google sheet as db]@{ ticket: https://github.com/ggdaltoso/95Recipes?tab=readme-ov-file, priority: 'High'}
+  [In progress]
+  [Done]
+    [Add react95 comp lib]@{priority: 'Very High' }
+```
+
 <!-- TODO create workflow for varcel -->
 <!-- TODO https://vercel.com/guides/how-can-i-use-github-actions-with-verce -->
