@@ -34,8 +34,12 @@ import {
   SiElectron,
   SiApachecordova,
   SiPrimeng,
-  SiNextdotjs,
+  SiOpenjdk,
   SiMui,
+  SiSpring,
+  SiRabbitmq,
+  SiSwagger,
+  SiSonarqube,
 } from '@icons-pack/react-simple-icons'
 
 const PAST_ROLES: {
@@ -50,20 +54,29 @@ const PAST_ROLES: {
 }[] = [
     {
       company: 'M&C Aero',
-      role: 'Frontend Engineer',
-      description: "As Frontend Engineer at M&C, I've been dedicated to creating seamless, high-performance web applications that bridge the gap between design and development. One of my standout accomplishments was developing an innovative code generator using Style Dictionary, automating the integration of Figma design updates into our frontend design system repo, which greatly enhanced our workflow efficiency. Additionally, I redesigned the entire frontend application to address design inconsistencies and create a unified, cohesive user experience. By leveraging Style Dictionary to standardize design tokens (colors, typography, spacing) across the codebase, I ensured consistent design application and simplified future updates, making our system more scalable and easier to maintain.",
+      role: 'Fullstack Developer',
+      description: "As a fullstack developer, I have been instrumental in the design and development of web applications, contributing to both front-end and back-end development. My role has involved building responsive, user-friendly interfaces while ensuring high performance, scalability, and accessibility. I have also taken on responsibilities such as code reviews, troubleshooting, and integrating authentication solutions to enhance the overall user experience.",
       keyResponsibilities: [
-        "Built responsive, user-friendly web applications with a strong emphasis on performance, scalability, and accessibility.",
-        "Implemented and maintained clean, modular web interfaces using HTML, SCSS, Angular, and Typescript.",
-        "Ensured 100% code coverage through rigorous unit testing and continuous integration processes.",
-        "Reviewed the Functional Requirements Document and drafted a proposal for the Technical Design Document, outlining the technical approach and solution for the project.",
-        "Collaborated closely with designers to convert static mockups and wireframes into functional, interactive, and accessible interfaces.",
-        "Redesigned the entire frontend application to address design inconsistencies and create a unified, cohesive user experience. Leveraged Style Dictionary to standardize design tokens (colors, typography, spacing) across the codebase, ensuring design consistency and simplifying future updates.",
-        "Actively participated in code reviews, maintaining high coding standards and best practices across the team.",
-        "Troubleshot and debugged frontend issues to optimize the user experience, ensuring performance on all devices and browsers.",
-        "Integrated Keycloak for user authentication and authorization.",
+        'Independently owned and delivered key frontend modules using Angular, TypeScript, HTML, and SCSS — including configurable data import, multi-stepped transaction matching, fee reconciliation, exception and alert management, and accounting journal entry generation. Taking full end-to-end responsibility from design to production with minimal oversight.',
+        'Contributed to the Angular 13 to 17 migration, modernising the codebase to leverage standalone components, improved performance, and up-to-date tooling.',
+        'Contributed to backend development with Java (Spring Boot) and Node.js, designing and maintaining REST APIs integrated via API Gateway and documented with Swagger.',
+        'Played an active role in the design and implementation of Java microservices following Hexagonal Architecture, DDD, CQRS, and event-driven patterns using ActiveMQ.',
+        'Integrated Keycloak for authentication and authorization, owning the implementation across both frontend and backend layers.',
+        'Ensured 100% code coverage through TDD, writing unit, integration, and E2E tests across the stack.',
+        'Contributed to CI/CD pipeline maintenance using Jenkins, and collaborated with the team via JIRA, Git, and Confluence.',
+        'Participated in Scrum ceremonies and collaborated cross-functionally with designers and business analysts.',
+        'Conducted code reviews and supported the onboarding and mentoring of junior developers.',
       ],
       skills: [
+        { skill: 'java', icon: SiOpenjdk },
+        { skill: 'spring', icon: SiSpring },
+        { skill: 'postgresql', icon: SiPostgresql },
+        { skill: 'rabbitmq', icon: SiRabbitmq },
+        { skill: 'redis', icon: SiRedis },
+        { skill: 'swagger', icon: SiSwagger },
+        { skill: 'mongodb', icon: SiMongodb },
+        { skill: 'nodejs', icon: SiNodedotjs },
+        { skill: 'sonarqubes', icon: SiSonarqube },
         { skill: 'html', icon: SiHtml5 },
         { skill: 'css', icon: SiCss3 },
         { skill: 'angular', icon: SiAngular },
@@ -80,21 +93,22 @@ const PAST_ROLES: {
         { skill: 'jira', icon: SiJira },
         { skill: 'confluence', icon: SiConfluence },
       ],
-      closingStatement: "This role has not only allowed me to refine my technical expertise but also to lead initiatives that drive consistency, performance, and innovation across our web applications.",
+      closingStatement:
+        'This role has not only allowed me to refine my technical expertise but also to lead initiatives that drive consistency, performance, and innovation across our web applications.',
       startDate: 'Feb 2023',
       endDate: 'Present',
     },
+
     {
       company: 'Bureau Veritas',
-      role: 'Software Engineer',
-      description: "As an external Software Engineer, I played a pivotal role in revitalizing a project management application, contributing to both front-end and back-end development. Working as a freelancer, I led a team in Abu Dhabi and collaborated closely with internal stakeholders to design and implement key features that streamlined project workflows and enhanced the overall user experience.",
+      role: 'Fullstack Developer',
+      description:
+        'As an external fullstack developer, I played a pivotal role in revitalizing a project management application, contributing to both front-end and back-end development. Working as a freelancer, I led a team in Abu Dhabi and collaborated closely with internal stakeholders to design and implement key features that streamlined project workflows and enhanced the overall user experience.',
       keyResponsibilities: [
-        "Led a team in Abu Dhabi to define the information architecture and create a sitemap for the application.",
-        "Established a design system that provided consistency across the app's UI and improved future scalability.",
-        "Designed and illustrated high-fidelity wireframes and visualized wireflows to ensure the UI/UX was intuitive and functional.",
-        "Programmed a prototype using Figma, demonstrating the interactive flow and functionality of the new application.",
-        "Coordinated various back-end tasks.",
-        "Optimized and streamlined processes to ensure high performance, security, and scalability of the application.",
+        'Drove the UX process from information architecture and sitemap design through high-fidelity wireframes, wireflows, and interactive Figma prototypes — including establishing the design system.',
+        'Built the front-end from scratch as the sole engineer, using React, Redux, Sass, and Jest.',
+        'Contributed to and oversaw back-end development with Node.js.',
+        'Integrated Firebase services including Authentication, Firestore, and Cloud Functions.',
       ],
       skills: [
         { skill: 'html', icon: SiHtml5 },
@@ -116,14 +130,16 @@ const PAST_ROLES: {
       startDate: 'Nov 2021',
       endDate: 'Sep 2022',
     },
+
     {
       company: 'Syntropy Studio',
       role: 'Fullstack Developer',
-      description: 'As a key contributor to the development of our main product, I played a central role in creating and integrating new features, enhancing both the front-end and back-end components. I focused on improving product functionality, performance, and maintainability.',
+      description:
+        'As a key contributor to the development of our main product, I played a central role in creating and integrating new features, enhancing both the front-end and back-end components. I focused on improving product functionality, performance, and maintainability.',
       keyResponsibilities: [
-        "Developed and integrated new features into the main product using React, Redux, Firebase Cloud Functions, and Firestore to enhance user experience and application performance.",
-        "Documented all enhancements, improving team collaboration and ensuring a valuable knowledge base for future reference and onboarding.",
-        "Took the initiative to revamp and refactor the legacy codebase, thoroughly assessing and improving older code to enhance its quality, maintainability, and performance.",
+        'Developed and integrated new features into the main product using React, Redux, Firebase Cloud Functions, and Firestore to enhance user experience and application performance.',
+        'Documented all enhancements, improving team collaboration and ensuring a valuable knowledge base for future reference and onboarding.',
+        'Took the initiative to revamp and refactor the legacy codebase, thoroughly assessing and improving older code to enhance its quality, maintainability, and performance.',
       ],
       skills: [
         { skill: 'html', icon: SiHtml5 },
@@ -142,13 +158,15 @@ const PAST_ROLES: {
       startDate: 'Dec 2020',
       endDate: 'Aug 2021',
     },
+
     {
       company: 'Bureau Veritas',
       role: 'Fullstack Developer',
-      description: 'I took full ownership of the design and development process for a desktop application, building it from the ground up. Working independently, I managed the end-to-end process, ensuring a seamless and functional user experience.',
+      description:
+        'I took full ownership of the design and development process for a desktop application, building it from the ground up. Working independently, I managed the end-to-end process, ensuring a seamless and functional user experience.',
       keyResponsibilities: [
-        "Designed and developed a desktop application from scratch using Electron, React, and Redux.",
-        "Took full ownership of the design process, ensuring a user-centric approach and attention to detail throughout the development cycle.",
+        'Designed and developed a desktop application from scratch using Electron, React, and Redux.',
+        'Took full ownership of the design process, ensuring a user-centric approach and attention to detail throughout the development cycle.',
       ],
       skills: [
         { skill: 'html', icon: SiHtml5 },
@@ -163,16 +181,17 @@ const PAST_ROLES: {
       startDate: 'Jan 2020',
       endDate: 'Jul 2020',
     },
+
     {
       company: 'Aptyx',
       role: 'Fullstack Developer',
-      description: 'I contributed to the development of both web and mobile applications, building robust back-end services and managing full project lifecycles from concept to deployment.',
+      description:'I contributed to the development of both web and mobile applications, building robust back-end services and managing full project lifecycles from concept to deployment.',
       keyResponsibilities: [
-        "Developed a RESTful API using Node.js and Express, enabling seamless communication between the front-end and back-end.",
-        "Built web and mobile applications using Node.js, JavaScript, ReactJS, and Cordova, ensuring cross-platform functionality and a smooth user experience.",
-        "Utilized MongoDB for efficient data storage and management, designing a well-structured schema to ensure scalability and security.",
-        "Planned and managed sprints, organizing tasks and ensuring timely delivery through daily meetings and regular progress updates.",
-        "Conceptualized wikis, user stories, and new features to align with project goals and enhance the overall product roadmap.",
+        'Developed a RESTful API using Node.js and Express, enabling seamless communication between the front-end and back-end.',
+        'Built web and mobile applications using Node.js, JavaScript, ReactJS, and Cordova, ensuring cross-platform functionality and a smooth user experience.',
+        'Utilized MongoDB for efficient data storage and management, designing a well-structured schema to ensure scalability and security.',
+        'Planned and managed sprints, organizing tasks and ensuring timely delivery through daily meetings and regular progress updates.',
+        'Conceptualized wikis, user stories, and new features to align with project goals and enhance the overall product roadmap.',
       ],
       skills: [
         { skill: 'html', icon: SiHtml5 },
@@ -193,10 +212,11 @@ const PAST_ROLES: {
     {
       company: 'Compagnie Franco Tunisienne des Pétroles',
       role: 'Fullstack Developer - Internship',
-      description: 'During my internship, I contributed to the development of a web application designed to monitor and control oil production remotely. This project involved both front-end and back-end tasks, as well as real-time data integration.',
+      description:
+        'During my internship, I contributed to the development of a web application designed to monitor and control oil production remotely. This project involved both front-end and back-end tasks, as well as real-time data integration.',
       keyResponsibilities: [
-        "Developed a web application using JavaScript, HTML, and CSS to remotely monitor oil production and control oil pumps.",
-        "Integrated real-time data feeds into the application, enabling informed decision-making and efficient monitoring of production."
+        'Developed a web application using JavaScript, HTML, and CSS to remotely monitor oil production and control oil pumps.',
+        'Integrated real-time data feeds into the application, enabling informed decision-making and efficient monitoring of production.',
       ],
       skills: [
         { skill: 'html', icon: SiHtml5 },
@@ -211,8 +231,8 @@ const PAST_ROLES: {
       role: 'Fullstack Developer - Internship',
       description: 'I developed an application using MS Access and Visual Basic for Applications (VBA) to calculate the First Pass Yield (FPY) for all testing machines. The objective was to forecast potential machine failures before they occur, enabling proactive maintenance and improving overall production efficiency by streamlining data analysis.',
       keyResponsibilities: [
-        "Developed an application using MS Access and VBA to automate the calculation of First Pass Yield (FPY) for all testing machines.",
-        "Improved efficiency by providing real-time yield analysis, allowing for better decision-making and process optimization."
+          'Developed an application using MS Access and VBA to automate the calculation of First Pass Yield (FPY) for all testing machines.',
+          'Improved efficiency by providing real-time yield analysis, allowing for better decision-making and process optimization.',
       ],
       startDate: '2 months',
       endDate: '',
