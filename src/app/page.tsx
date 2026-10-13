@@ -6,7 +6,7 @@ import {
   CardTitle,
 } from '@/components/ui/card'
 
-export default function Home() {
+export default async function Home() {
   return (
     <div className="font-base w-[--page-width] max-w-full px-5">
       <h1 className="text-2xl font-heading sm:text-4xl">Zakaria</h1>
