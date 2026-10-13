@@ -15,12 +15,16 @@ export default function Nav() {
       text: 'Me',
     },
     {
-      path: '/about',
-      text: 'About',
+      path: '/about-me',
+      text: 'About Me',
     },
     {
       path: '/work',
       text: 'Work',
+    },
+    {
+      path: '/blogs',
+      text: 'Blogs',
     },
     {
       path: '/windows',

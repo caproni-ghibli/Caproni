@@ -76,3 +76,4 @@ kanban
 
 <!-- TODO create workflow for varcel -->
 <!-- TODO https://vercel.com/guides/how-can-i-use-github-actions-with-verce -->
+get updated db vercel env pull .env.local --environment=development --yes
