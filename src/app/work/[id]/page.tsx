@@ -1,19 +1,21 @@
 import { faCalendar } from '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { RoughNotation, RoughNotationGroup } from 'react-rough-notation';
+import { RoughNotation } from 'react-rough-notation';
 import Marquee from '@/components/ui/marquee'
 import PAST_ROLES from '@/data/experience'
+import { notFound } from 'next/navigation'
 
 interface Params {
-  id: number;  
+  id: string
 }
 
 
+async function WorkPage({params,}: { params: Promise<Params>}) {
+  const { id } = await params
+  const skill = PAST_ROLES[Number(id)]
 
+  if (!skill) { notFound() }
 
-
-function WorkPage({ params }: { params: Params }) {
-  const skill = PAST_ROLES[params.id];
   return (
     <div className='w-full place-items-center'>
 
