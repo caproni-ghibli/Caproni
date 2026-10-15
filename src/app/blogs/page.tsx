@@ -1,14 +1,11 @@
 import { sql } from '@/lib/db';
 import Link from 'next/link';
 
-
 export const dynamic = "force-dynamic";
 
-
-
 export default async function Blogs() {
-// [ ] Create a new comp called BlogCard that  displays the blog title and brief content, tags at the bottom with category 
-const blogs = await sql`SELECT id, title, brief, tags, content FROM blogs ORDER BY id DESC`;
+
+    const blogs = await sql`SELECT id, title, brief, tags, content FROM blogs ORDER BY id DESC`;
 
 
     return (
