@@ -8,7 +8,6 @@ interface PageProps {
   params: Promise<{ id: string }>;
 }
 
-
 export default async function BlogPage({ params }: PageProps) {
   const { id } = await params;
 
@@ -23,18 +22,20 @@ export default async function BlogPage({ params }: PageProps) {
   if (!blog) notFound();
 
   return (
-    <div className="w-[--page-width] px-4 sm:px-6 lg:px-8">
-      <h1 className="mb-8 text-2xl font-heading sm:text-3xl">
+    // w-full + max-w keeps your desktop width but lets the page shrink on phones.
+    // On Tailwind v4 use max-w-(--page-width) instead of max-w-[--page-width].
+    <div className="mx-auto w-full max-w-[--page-width] px-4 sm:px-6 lg:px-8">
+      <h1 className="mb-6 text-2xl font-heading leading-tight break-words sm:mb-8 sm:text-3xl">
         {blog.title}
       </h1>
 
-      <div className="prose prose-lg max-w-none dark:prose-invert">
+      <div className="prose prose-base max-w-none break-words dark:prose-invert sm:prose-lg">
         <ReactMarkdown
           remarkPlugins={[remarkGfm]}
           components={{
             h1({ children }) {
               return (
-                <h1 className="mt-10 mb-5 text-xl font-bold tracking-tight sm:text-2xl">
+                <h1 className="mt-8 mb-4 text-2xl font-bold tracking-tight sm:mt-10 sm:mb-5 sm:text-3xl">
                   {children}
                 </h1>
               );
@@ -42,7 +43,7 @@ export default async function BlogPage({ params }: PageProps) {
 
             h2({ children }) {
               return (
-                <h2 className="mt-10 mb-4 text-xl font-bold tracking-tight sm:text-xl">
+                <h2 className="mt-8 mb-3 text-xl font-bold tracking-tight sm:mt-10 sm:mb-4 sm:text-2xl">
                   {children}
                 </h2>
               );
@@ -50,7 +51,7 @@ export default async function BlogPage({ params }: PageProps) {
 
             h3({ children }) {
               return (
-                <h3 className="mt-8 mb-3 text-l font-semibold sm:text-xl">
+                <h3 className="mt-6 mb-3 text-lg font-semibold sm:mt-8 sm:text-xl">
                   {children}
                 </h3>
               );
@@ -66,7 +67,7 @@ export default async function BlogPage({ params }: PageProps) {
 
             ul({ children }) {
               return (
-                <ul className="mb-6 ml-6 list-disc space-y-2">
+                <ul className="mb-6 ml-5 list-disc space-y-2 sm:ml-6">
                   {children}
                 </ul>
               );
@@ -74,7 +75,7 @@ export default async function BlogPage({ params }: PageProps) {
 
             ol({ children }) {
               return (
-                <ol className="mb-6 ml-6 list-decimal space-y-2">
+                <ol className="mb-6 ml-5 list-decimal space-y-2 sm:ml-6">
                   {children}
                 </ol>
               );
@@ -88,7 +89,7 @@ export default async function BlogPage({ params }: PageProps) {
               return (
                 <a
                   href={href}
-                  className="text-primary underline underline-offset-4 hover:opacity-80"
+                  className="text-primary underline underline-offset-4 break-words hover:opacity-80"
                 >
                   {children}
                 </a>
@@ -97,16 +98,29 @@ export default async function BlogPage({ params }: PageProps) {
 
             blockquote({ children }) {
               return (
-                <blockquote className="my-6 border-l-4 pl-4 italic text-muted-foreground">
+                <blockquote className="my-6 border-l-4 pl-3 italic text-muted-foreground sm:pl-4">
                   {children}
                 </blockquote>
               );
             },
 
+            // Images from markdown never overflow the screen
+            img({ src, alt }) {
+              return (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={src}
+                  alt={alt ?? ''}
+                  className="my-6 h-auto max-w-full rounded-lg"
+                />
+              );
+            },
+
+            // The wrapper scrolls horizontally; min-w stops columns being crushed
             table({ children }) {
               return (
                 <div className="not-prose my-6 w-full overflow-x-auto rounded-lg border border-neutral-300 dark:border-neutral-700">
-                  <table className="w-full border-collapse text-sm">
+                  <table className="w-full min-w-[32rem] border-collapse text-sm">
                     {children}
                   </table>
                 </div>
@@ -135,7 +149,7 @@ export default async function BlogPage({ params }: PageProps) {
 
             th({ children }) {
               return (
-                <th className="border-r border-neutral-300 px-4 py-2 text-left font-semibold last:border-r-0 dark:border-neutral-700">
+                <th className="border-r border-neutral-300 px-3 py-2 text-left font-semibold last:border-r-0 sm:px-4 dark:border-neutral-700">
                   {children}
                 </th>
               );
@@ -143,7 +157,7 @@ export default async function BlogPage({ params }: PageProps) {
 
             td({ children }) {
               return (
-                <td className="border-r border-neutral-300 px-4 py-2 align-top last:border-r-0 dark:border-neutral-700">
+                <td className="border-r border-neutral-300 px-3 py-2 align-top last:border-r-0 sm:px-4 dark:border-neutral-700">
                   {children}
                 </td>
               );
@@ -152,7 +166,7 @@ export default async function BlogPage({ params }: PageProps) {
             code({ className, children, ...props }) {
               if (className?.includes('language-mermaid')) {
                 return (
-                  <div className="my-8 w-full overflow-x-auto">
+                  <div className="my-8 w-full overflow-x-auto [&_svg]:h-auto [&_svg]:max-w-full">
                     <Mermaid chart={String(children).trim()} />
                   </div>
                 );
@@ -165,7 +179,7 @@ export default async function BlogPage({ params }: PageProps) {
                   className={
                     isBlock
                       ? 'font-mono text-sm'
-                      : 'rounded bg-muted px-1.5 py-0.5 font-mono text-sm'
+                      : 'rounded bg-muted px-1.5 py-0.5 font-mono text-sm break-words'
                   }
                   {...props}
                 >
@@ -182,7 +196,7 @@ export default async function BlogPage({ params }: PageProps) {
               if (isMermaid) return <>{children}</>;
 
               return (
-                <pre className="my-6 overflow-x-auto rounded-lg bg-muted p-4">
+                <pre className="my-6 overflow-x-auto rounded-lg bg-muted p-3 text-sm sm:p-4">
                   {children}
                 </pre>
               );
