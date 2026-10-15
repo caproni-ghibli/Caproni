@@ -8,9 +8,11 @@ interface PageProps {
   params: Promise<{ id: string }>;
 }
 
+export const dynamic = 'force-dynamic';
+
 export default async function BlogPage({ params }: PageProps) {
   const { id } = await params;
-
+  
   const rows = await sql`
     SELECT id, title, brief, tags, content
     FROM blogs
