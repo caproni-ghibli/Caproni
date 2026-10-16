@@ -1,17 +1,19 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@config "../../tailwind.config.ts";
+@custom-variant dark (&:where(.dark, .dark *));
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-@media (min-width: 768px) {
+@layer base {
   * {
-    font-size: 18px;
-    line-height: 2rem;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: 768px) {
+    * {
+      font-size: 18px;
+      line-height: 2rem;
+    }
   }
 }
 
