@@ -9,7 +9,7 @@ export default async function Blogs() {
 
 
     return (
-        <div className=' w-[--page-width]  px-5 max-w-full'>
+        <div className=' w-(--page-width)  px-5 max-w-full'>
             <h1 className="mb-8 text-2xl font-heading sm:text-4xl">Blogs</h1>
             {blogs.map((blog) => ( 
                 <Link 

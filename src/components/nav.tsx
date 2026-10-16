@@ -59,7 +59,7 @@ export default function Nav() {
     <div className="fixed left-0 top-5 z-50 w-full px-3 sm:px-0 md:w-[calc(100vw-16px)]">
       <nav
         ref={navRef}
-        className="relative mx-auto flex max-w-[--page-width] items-center gap-5 rounded-base border-2 border-border bg-main p-2.5 px-5 text-sm font-base text-text shadow-light dark:border-darkBorder dark:shadow-dark sm:text-base w450:gap-4"
+        className="relative mx-auto flex max-w-(--page-width) items-center gap-5 rounded-base border-2 border-border bg-main p-2.5 px-5 text-sm font-base text-text shadow-light dark:border-darkBorder dark:shadow-dark sm:text-base w450:gap-4"
       >
         {/* Menu button: phones only */}
         <button
