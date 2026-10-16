@@ -20,7 +20,7 @@ async function WorkPage({params,}: { params: Promise<Params>}) {
     <div className='w-full place-items-center'>
 
 
-        <div className=' px-5 w-[--page-width] max-w-full'>
+        <div className=' px-5 w-(--page-width) max-w-full'>
 
           <h2 className="text-xl font-heading sm:text-2xl">
             {skill.role}
@@ -38,7 +38,7 @@ async function WorkPage({params,}: { params: Promise<Params>}) {
 
           </div>
 
-          <div className='w-[--page-width] max-w-full'>
+          <div className='w-(--page-width) max-w-full'>
 
             <h3 className='text-lg font-heading'>
               <span className='mr-2'>
@@ -61,7 +61,7 @@ async function WorkPage({params,}: { params: Promise<Params>}) {
         
         </div>
 
-        <div className='px-5 w-[--page-width] max-w-full'>
+        <div className='px-5 w-(--page-width) max-w-full'>
 
           <h3 className='text-lg font-heading'>
             <span className='mr-2'> 

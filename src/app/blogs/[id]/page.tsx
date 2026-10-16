@@ -25,8 +25,8 @@ export default async function BlogPage({ params }: PageProps) {
 
   return (
     // w-full + max-w keeps your desktop width but lets the page shrink on phones.
-    // On Tailwind v4 use max-w-(--page-width) instead of max-w-[--page-width].
-    <div className="mx-auto w-full max-w-[--page-width] px-4 sm:px-6 lg:px-8">
+    // On Tailwind v4 use max-w-(--page-width) instead of max-w-(--page-width).
+    <div className="mx-auto w-full max-w-(--page-width) px-4 sm:px-6 lg:px-8">
       <h1 className="mb-6 text-2xl font-heading leading-tight break-words sm:mb-8 sm:text-3xl">
         {blog.title}
       </h1>
