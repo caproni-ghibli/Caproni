@@ -57,16 +57,15 @@ const PAST_ROLES: {
       role: 'Fullstack Developer',
       description: "As a fullstack developer, I have been instrumental in the design and development of web applications, contributing to both front-end and back-end development. My role has involved building responsive, user-friendly interfaces while ensuring high performance, scalability, and accessibility. I have also taken on responsibilities such as code reviews, troubleshooting, and integrating authentication solutions to enhance the overall user experience.",
       keyResponsibilities: [
+        'Authored 2 ADRs defining a pagination approach with pre-fetching of subsequent pages and the extraction of shared components into a design system, giving the team a documented standard for faster, more consistent UI.',
         'Designed reusable AI agent skills and project-context files that encode our architecture, design patterns, and testing conventions, so generated code matches team standards from the first draft and cuts implementation time by 50% for 15 engineers.',
-        'Automated first-pass PR review with AI agent skills covering architecture, design patterns, test falsy coverage and coding best practice, cutting average review time from 2 hours to 1 hours and catching an average of 14 issues per day before human reviewers step in.',
-        'Independently owned and delivered key frontend modules using Angular, TypeScript, HTML, and SCSS — including configurable data import, multi-stepped transaction matching, fee reconciliation, exception and alert management, and accounting journal entry generation. Taking full end-to-end responsibility from design to production with minimal oversight.',
+        'Automated first-pass PR review with AI agent skills covering architecture, design patterns, test falsy coverage and coding best practice, cutting average review time from 2 hours to 1 hour and catching an average of 14 issues per day before human reviewers step in.',
         'Contributed to the Angular 13 to 19 migration, modernising the codebase to leverage standalone components, improved performance, and up-to-date tooling.',
         'Contributed to backend development with Java (Spring Boot) and Node.js, designing and maintaining REST APIs integrated via API Gateway and documented with Swagger.',
         'Played an active role in the design and implementation of Java microservices following Hexagonal Architecture, DDD, CQRS, and event-driven patterns using ActiveMQ.',
         'Integrated Keycloak for authentication and authorization, owning the implementation across both frontend and backend layers.',
         'Ensured 100% code coverage through TDD, writing unit, integration, and E2E tests across the stack.',
         'Contributed to CI/CD pipeline maintenance using Jenkins, and collaborated with the team via JIRA, Git, and Confluence.',
-        'Participated in Scrum ceremonies and collaborated cross-functionally with designers and business analysts.',
         'Conducted code reviews and supported the onboarding and mentoring of junior developers.',
       ],
       skills: [

@@ -21,7 +21,7 @@ export default function About() {
                 </span>
               </RoughNotation>
               <span>
-                {" with 4 years of experience designing, building, and maintaining scalable web applications. Specializing in both"}
+                {" with 7 years of experience designing, building, and maintaining scalable web applications. Specializing in both"}
               </span>
               <RoughNotation type="underline" order={3} multiline={false} >
                 {" Frontend"}
