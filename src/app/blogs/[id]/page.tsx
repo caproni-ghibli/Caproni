@@ -1,3 +1,5 @@
+import { cache } from 'react';
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { sql } from '@/lib/db';
 import ReactMarkdown from 'react-markdown';
@@ -10,16 +12,52 @@ interface PageProps {
 
 export const dynamic = 'force-dynamic';
 
-export default async function BlogPage({ params }: PageProps) {
-  const { id } = await params;
-  
+const getBlog = cache(async (id: string) => {
   const rows = await sql`
-    SELECT id, title, brief, tags, content
+    SELECT id, title, brief, tags, content, image_url
     FROM blogs
     WHERE id = ${id}
   `;
+  return rows[0];
+});
 
-  const blog = rows[0];
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { id } = await params;
+  const blog = await getBlog(id);
+  if (!blog) return {};
+
+  const url = `/blogs/${id}`;
+  const description = blog.brief ?? undefined;
+  const tags = Array.isArray(blog.tags) ? blog.tags : undefined;
+  const images = blog.image_url
+    ? [{ url: blog.image_url as string, width: 1200, height: 630, alt: blog.title }]
+    : undefined;
+
+  return {
+    title: blog.title,
+    description,
+    keywords: tags,
+    alternates: { canonical: url },
+    openGraph: {
+      type: 'article',
+      url,
+      title: blog.title,
+      description,
+      tags,
+      images,
+    },
+    twitter: {
+      card: images ? 'summary_large_image' : 'summary',
+      title: blog.title,
+      description,
+      images,
+    },
+  };
+}
+
+export default async function BlogPage({ params }: PageProps) {
+  const { id } = await params;
+  const blog = await getBlog(id);
 
   if (!blog) notFound();
 
